@@ -1,0 +1,111 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Your rule content
+
+- You can @ files here
+- You can use markdown but dont have to
+# Next.js + Tailwind CSS Project Rules
+
+## Project Structure
+- Use App Router (`app/` directory)
+- Place all components in `app/components/`
+- Group related components in subdirectories (e.g., `app/components/auth/`, `app/components/layout/`)
+- Keep pages in `app/(routes)/` following Next.js 13+ conventions
+- Store utility functions in `app/lib/`
+- Place types/interfaces in `app/types/`
+- Store constants in `app/constants/`
+- Keep hooks in `app/hooks/`
+
+## Component Guidelines
+- Use TypeScript for all components
+- Follow naming convention: PascalCase for components
+- Create separate files for types (e.g., `types.ts`)
+- Implement proper error boundaries
+- Use React Server Components by default
+- Mark client components with 'use client' directive when needed
+
+## Styling Rules
+- Use Tailwind CSS classes exclusively
+- Follow mobile-first approach
+- Create reusable utility classes in `app/styles/globals.css`
+- Use CSS variables for theme colors in `tailwind.config.js`
+- Maintain consistent spacing using Tailwind's spacing scale
+- Use semantic color names in theme configuration
+
+## Animation Guidelines
+- Use Framer Motion for complex animations
+- Implement animations through CSS classes for simple transitions
+- Add data-attributes for animation triggers
+- Use `@apply` in globals.css for reusable animation classes
+- Follow this structure for animation components:
+  ```tsx
+  'use client'
+  import { motion } from 'framer-motion'
+  
+  export const AnimatedComponent = () => {
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        {/* content */}
+      </motion.div>
+    )
+  }
+  ```
+
+## Performance Rules
+- Implement proper image optimization using next/image
+- Use dynamic imports for heavy components
+- Implement proper loading states
+- Use React Suspense boundaries
+- Cache API responses appropriately
+
+## State Management
+- Use React Context for global state when needed
+- Implement proper loading and error states
+- Use React Query for API data management
+- Follow atomic state management principles
+
+## API Integration
+- Create API routes in `app/api/`
+- Use proper error handling
+- Implement proper type safety
+- Use environment variables for sensitive data
+
+## Accessibility
+- Use semantic HTML elements
+- Implement proper ARIA attributes
+- Ensure proper color contrast
+- Support keyboard navigation
+- Test with screen readers
+
+## Testing
+- Write unit tests for components
+- Implement E2E tests using Cypress/Playwright
+- Test responsive layouts
+- Test animations and transitions
+
+## Git Conventions
+- Use conventional commits
+- Create feature branches
+- Write descriptive PR descriptions
+- Keep commits atomic and focused
+
+## Documentation
+- Document complex components
+- Add JSDoc comments for functions
+- Document animation implementations
+- Keep README updated
+
+Remember to:
+- Always validate props with TypeScript
+- Implement proper error handling
+- Follow React best practices
+- Keep components small and focused
+- Use proper code splitting
