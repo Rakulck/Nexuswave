@@ -19,7 +19,7 @@ const Services = () => {
              <div className="transition-all duration-300 bg-black p-8 rounded-3xl shadow-lg min-h-[600px] max-w-[400px] mx-auto w-full flex flex-col items-center justify-center text-center relative overflow-hidden">
               <div className="absolute inset-0">
                 <Image 
-                  src="/assets/team.jpg"
+                  src="/assets/initiate.jpg"
                   alt="Claim Initiation"
                   fill
                   priority
@@ -27,15 +27,15 @@ const Services = () => {
                 />
               </div>
               <div className="relative z-10">
-                <h3 className="text-3xl font-extrabold text-white mb-6">Claim Initiation</h3>
-                <p className="text-xl font-medium text-gray-200">Streamlined process for initiating and submitting claims efficiently</p>
+                <h3 className="text-4xl font-extrabold text-silver mb-6">Claim Initiation</h3>
+                <p className="text-2xl font-medium text-silver">Streamlined process for initiating and submitting claims efficiently</p>
               </div>
             </div>
 
              <div className="transition-all duration-300 bg-black p-8 rounded-3xl shadow-lg min-h-[600px] max-w-[400px] mx-auto w-full flex flex-col items-center justify-center text-center relative overflow-hidden">
               <div className="absolute inset-0">
                 <Image 
-                  src="/assets/team.jpg"
+                  src="/assets/loading.jpg"
                   alt="Claim Processing"
                   fill
                   priority
@@ -43,8 +43,8 @@ const Services = () => {
                 />
               </div>
               <div className="relative z-10">
-                <h3 className="text-4xl font-extrabold text-silver mb-8">Claim Processing</h3>
-                <p className="text-2xl font-medium text-silver">Advanced processing systems for quick and accurate claim handling</p>
+                <h3 className="text-5xl font-extrabold text-silver mb-8">Claim Processing</h3>
+                <p className="text-3xl font-medium text-silver">Advanced processing systems for quick and accurate claim handling</p>
               </div>
             </div>
 
@@ -59,8 +59,8 @@ const Services = () => {
                 />
               </div>
               <div className="relative z-10">
-                <h3 className="text-4xl font-extrabold text-silver mb-8">Claim Review</h3>
-                <p className="text-2xl font-medium text-silver">Thorough review process ensuring accuracy and compliance</p>
+                <h3 className="text-5xl font-extrabold text-silver mb-8">Claim Review</h3>
+                <p className="text-3xl font-medium text-silver">Thorough review process ensuring accuracy and compliance</p>
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@ const Services = () => {
             <div className="transition-all duration-300 bg-black p-8 rounded-3xl shadow-lg min-h-[600px] max-w-[400px] w-full flex flex-col items-center justify-center text-center relative overflow-hidden">
               <div className="absolute inset-0">
                 <Image 
-                  src="/assets/team.jpg"
+                  src="/assets/any.jpg"
                   alt="Claim Authorization"
                   fill
                   priority
@@ -78,8 +78,8 @@ const Services = () => {
                 />
               </div>
               <div className="relative z-10">
-                <h3 className="text-4xl font-extrabold text-silver mb-8">Claim Authorization</h3>
-                <p className="text-2xl font-medium text-silver">Secure and efficient authorization process</p>
+                <h3 className="text-5xl font-extrabold text-silver mb-8">Claim Authorization</h3>
+                <p className="text-3xl font-medium text-silver">Secure and efficient authorization process</p>
               </div>
             </div>
 
@@ -94,8 +94,8 @@ const Services = () => {
                 />
               </div>
               <div className="relative z-10">
-                <h3 className="text-4xl font-extrabold text-silver mb-8">Administration</h3>
-                <p className="text-2xl font-medium text-silver">Comprehensive administrative tools and support</p>
+                <h3 className="text-5xl font-extrabold text-silver mb-8">Administration</h3>
+                <p className="text-3xl font-medium text-silver">Comprehensive administrative tools and support</p>
               </div>
             </div>
           </div>
