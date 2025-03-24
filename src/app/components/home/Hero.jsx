@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
-import NetworkAnimation from './NetworkAnimation';
+import NetworkAnimation from '../Animation/NetworkAnimation';  
 const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
   const videoRef = useRef(null);
