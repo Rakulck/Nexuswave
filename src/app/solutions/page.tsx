@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import FeaturesCarousel from '../components/FeaturesCarousel';
+import FeaturesCarousel from './FeaturesCarousel';
 
 export default function Solutions() {
   return (

@@ -8,12 +8,12 @@ const tools = [
     description: "Transform your business with cutting-edge digital tools and automation. Streamline operations and boost efficiency with our comprehensive digital solutions."
   },
   {
-    image: "/assets/data.jpg",
+    image: "/assets/nocode.png",
     title: "Customize without code",
     description: "Build and modify your workflows without writing a single line of code. Our intuitive interface makes customization accessible to everyone."
   },
   {
-    image: "/assets/portals.jpg",
+    image: "/assets/whiteglove.jpg",
     title: "White-glove",
     description: "Experience premium support with our dedicated white-glove service. Get personalized assistance and expert guidance every step of the way."
   }
@@ -58,7 +58,7 @@ const Tools = () => {
               key={index}
               className="flex flex-col items-center"
             >
-              <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] rounded-xl overflow-hidden mb-8">
+              <div className="relative w-full h-[30vh] sm:h-[35vh] md:h-[40vh] lg:h-[45vh] rounded-xl overflow-hidden mb-8">
                 <Image
                   src={tool.image}
                   alt={`Tool ${index + 1}`}

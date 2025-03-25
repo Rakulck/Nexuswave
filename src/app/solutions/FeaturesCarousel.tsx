@@ -1,18 +1,9 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 
 const FeaturesCarousel = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (containerRef.current) {
-      // Calculate the initial scroll position to center the first card
-      const containerWidth = containerRef.current.clientWidth;
-      const scrollPosition = (containerWidth - 400) / 2;
-      containerRef.current.scrollLeft = scrollPosition;
-    }
-  }, []);
 
   const scrollContainer = (direction: 'left' | 'right') => {
     if (containerRef.current) {
@@ -28,13 +19,13 @@ const FeaturesCarousel = () => {
     <div className="w-full">
       <div 
         ref={containerRef}
-        className="overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+        className="overflow-x-auto scrollbar-none"
       >
         <div 
           className="flex gap-12 items-center snap-x snap-mandatory" 
           style={{ 
             width: 'max-content',
-            paddingLeft: '35vw'
+            paddingLeft: '18vw'
           }}
         >
           {/* Left Side Content */}
@@ -56,8 +47,8 @@ const FeaturesCarousel = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-xl font-medium text-white mt-6 mb-2 text-center">The thinnest borders on any risk platform</h3>
-            <p className="text-gray-400 text-center">Seamlessly integrate risk management across your organization</p>
+            <h3 className="text-xl font-medium text-white mt-6 mb-2">The thinnest borders on any risk platform</h3>
+            <p className="text-gray-400">Seamlessly integrate risk management across your organization</p>
           </div>
 
           {/* Feature 2 */}
@@ -69,8 +60,8 @@ const FeaturesCarousel = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-xl font-medium text-white mt-6 mb-2 text-center">Cloud-native architecture</h3>
-            <p className="text-gray-400 text-center">Connect systems and data for smarter decisions</p>
+            <h3 className="text-xl font-medium text-white mt-6 mb-2">Cloud-native architecture</h3>
+            <p className="text-gray-400">Connect systems and data for smarter decisions</p>
           </div>
 
           {/* Feature 3 */}
@@ -82,8 +73,8 @@ const FeaturesCarousel = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-xl font-medium text-white mt-6 mb-2 text-center">Premium Grade risk optimization</h3>
-            <p className="text-gray-400 text-center">Maximize opportunities with actionable insights</p>
+            <h3 className="text-xl font-medium text-white mt-6 mb-2">Premium Grade risk optimization</h3>
+            <p className="text-gray-400">Maximize opportunities with actionable insights</p>
           </div>
 
           {/* Feature 4 */}
@@ -95,8 +86,8 @@ const FeaturesCarousel = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-xl font-medium text-white mt-6 mb-2 text-center">Real-time visibility</h3>
-            <p className="text-gray-400 text-center">Monitor and address risks as they emerge</p>
+            <h3 className="text-xl font-medium text-white mt-6 mb-2">Real-time visibility</h3>
+            <p className="text-gray-400">Monitor and address risks as they emerge</p>
           </div>
 
           {/* Feature 5 */}
@@ -108,8 +99,8 @@ const FeaturesCarousel = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-xl font-medium text-white mt-6 mb-2 text-center">Strategic growth tools</h3>
-            <p className="text-gray-400 text-center">Drive business growth with confidence</p>
+            <h3 className="text-xl font-medium text-white mt-6 mb-2">Strategic growth tools</h3>
+            <p className="text-gray-400">Drive business growth with confidence</p>
           </div>
         </div>
       </div>
@@ -119,6 +110,7 @@ const FeaturesCarousel = () => {
         <button
           onClick={() => scrollContainer('left')}
           className="w-12 h-12 rounded-full border border-neutral-800 flex items-center justify-center text-white hover:bg-neutral-800 transition-colors"
+          aria-label="Scroll left"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
@@ -127,6 +119,7 @@ const FeaturesCarousel = () => {
         <button
           onClick={() => scrollContainer('right')}
           className="w-12 h-12 rounded-full border border-neutral-800 flex items-center justify-center text-white hover:bg-neutral-800 transition-colors"
+          aria-label="Scroll right"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
