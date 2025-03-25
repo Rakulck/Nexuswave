@@ -5,8 +5,34 @@ import { TrophyIcon, UserGroupIcon, PhoneIcon, CurrencyDollarIcon } from '@heroi
 import FeatureCard from './FeatureCard';
 
 const About = () => {
+  const style = `
+    @keyframes underline {
+      0% {
+        transform: scaleX(0);
+        transform-origin: left;
+      }
+      50% {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+      50.1% {
+        transform: scaleX(1);
+        transform-origin: right;
+      }
+      100% {
+        transform: scaleX(0);
+        transform-origin: right;
+      }
+    }
+
+    .animate-underline::after {
+      animation: underline 3s ease-in-out infinite;
+    }
+  `;
+
   return (
       <div id="about" className="bg-gradient-to-b from-black to-neutral-800">
+        <style>{style}</style>
         <div className="container mx-auto flex flex-col md:flex-row items-center max-w-[1600px] px-8 md:px-16 py-12">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -14,11 +40,13 @@ const About = () => {
             transition={{ duration: 1 }}
             className="md:w-1/2 pr-8 md:pr-16 py-12"
           >
-            <h2 className="text-7xl font-['Inter'] font-bold text-silver mb-8">Who We Are</h2>
+            <h2 className=" text-4xl lg:text-7xl sm:text-2xl md:text-4xl font-['Inter'] font-bold text-silver mb-8 relative inline-block after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-gray-400 after:bottom-[-8px] after:left-0 animate-underline">
+              Who We Are</h2>
             <p className="text-2xl text-silver mt-6 leading-relaxed">
              Nexus Wave streamlines enterprise business processes by modernizing and digitizing workflows, 
              empowering employees in the office and at the edge.
             </p>
+            
             
             <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
               <FeatureCard icon={TrophyIcon} title="Award Winning" />

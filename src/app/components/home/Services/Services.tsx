@@ -2,6 +2,31 @@ import React from 'react';
 import ServiceCard from './ServiceCard';
 
 const Services = () => {
+  const style = `
+    @keyframes underline {
+      0% {
+        transform: scaleX(0);
+        transform-origin: left;
+      }
+      50% {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+      50.1% {
+        transform: scaleX(1);
+        transform-origin: right;
+      }
+      100% {
+        transform: scaleX(0);
+        transform-origin: right;
+      }
+    }
+
+    .animate-underline::after {
+      animation: underline 3s ease-in-out infinite;
+    }
+  `;
+
   const services = [
     {
       imageSrc: "/assets/initiate.jpg",
@@ -37,9 +62,11 @@ const Services = () => {
 
   return (
     <section id="services" className="py-20 bg-gradient-to-b from-neutral-800 to-black">
+      <style>{style}</style>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-7xl font-bold text-silver mb-12">Claim Management</h2>
+          <h2 className="text-4xl lg:text-7xl sm:text-xl md:text-4xl font-bold text-silver mb-12 relative inline-block after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-gray-400 after:bottom-[-8px] after:left-0 animate-underline">
+            Claim Management</h2>
           <p className="text-3xl font-medium text-silver max-w-4xl mx-auto">
             Comprehensive claim management solutions designed to streamline your business processes.
           </p>

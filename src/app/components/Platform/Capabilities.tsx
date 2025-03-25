@@ -24,7 +24,19 @@ const style = `
     }
   }
 
+  .animate-underline {
+    display: inline-block;
+    position: relative;
+  }
+
   .animate-underline::after {
+    content: '';
+    position: absolute;
+    width: 68%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: rgb(156 163 175);
     animation: underline 3s ease-in-out infinite;
   }
 `;
@@ -64,7 +76,7 @@ const Capabilities = () => {
           viewport={{ once: true }}
         >
           {/* Left Column - Cards */}
-          <div className="space-y-8">
+          <div className="space-y-8 order-2 md:order-1">
             {/* Card 1 */}
             <motion.div
               className="relative flex bg-white rounded-xl overflow-hidden shadow-lg h-44"
@@ -79,9 +91,9 @@ const Capabilities = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/80 to-white"></div>
               </div>
-              <div className="relative ml-auto w-2/3 p-8 flex flex-col justify-center">
-                <h3 className="text-3xl font-bold mb-3 text-gray-900 leading-tight">Put Data in Motion</h3>
-                <p className="text-xl text-gray-700 leading-relaxed">
+              <div className="relative ml-auto w-2/3 p-4 sm:p-6 md:p-8 flex flex-col justify-center">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold sm:mb-3 text-gray-900 leading-tight pt-4">Data in Motion</h3>
+                <p className="text-sm sm:text-base md:text-xl pb-4 text-gray-700 leading-relaxed">
                   Nexuswave transforms data into actionable insights with automation. Streamline forms and sources using rules and collaboration tools.
                 </p>
               </div>
@@ -101,10 +113,10 @@ const Capabilities = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/80 to-white"></div>
               </div>
-              <div className="relative ml-auto w-2/3 p-8 flex flex-col justify-center">
-                <h3 className="text-3xl font-bold mb-3 text-gray-900 leading-tight">The Power of Portals</h3>
-                <p className="text-xl text-gray-700 leading-relaxed">
-                  Nexuswave's digital portals boost productivity by integrating systems. Streamline communication and track tasks with a unified platform.
+              <div className="relative ml-auto w-2/3 p-4 sm:p-6 md:p-8 flex flex-col justify-center">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold  sm:mb-3 text-gray-900 leading-tight pt-4">The Power of Portals</h3>
+                <p className="text-sm sm:text-base md:text-xl text-gray-700 leading-relaxed mb-4">
+                 Our digital portals boost productivity by integrating systems. Streamline communication and track tasks with a unified platform.
                 </p>
               </div>
             </motion.div>
@@ -123,9 +135,9 @@ const Capabilities = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/80 to-white"></div>
               </div>
-              <div className="relative ml-auto w-2/3 p-8 flex flex-col justify-center">
-                <h3 className="text-3xl font-bold mb-3 text-gray-900 leading-tight">Empower & Engage</h3>
-                <p className="text-xl text-gray-700 leading-relaxed">
+              <div className="relative ml-auto w-2/3 p-4 sm:p-6 md:p-8 flex flex-col justify-center">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold sm:mb-3 text-gray-900 leading-tight pt-2">Empower & Engage</h3>
+                <p className="text-sm sm:text-base md:text-xl text-gray-700 leading-relaxed">
                   Nexuswave empowers teams with efficient task management and automation. Approve, track, and automate workflows seamlessly.
                 </p>
               </div>
@@ -134,11 +146,12 @@ const Capabilities = () => {
 
           {/* Right Column - Main Content */}
           <motion.div
-            className="flex flex-col justify-center"
+            className="flex flex-col justify-center order-1 md:order-2"
             variants={itemVariants}
           >
-            <h2 className="text-4xl font-bold mb-8 leading-tight relative inline-block after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-gray-400 after:bottom-0 after:left-0 animate-underline">Business Transformation with Us</h2>
-            <p className="text-2xl text-gray-600 leading-relaxed">
+            <h2 className="text-center md:text-left text-2xl sm:text-3xl md:text-4xl font-bold sm:mb-6 md:mb-8 leading-tight relative inline-block animate-underline after:content-[''] after:absolute after:bottom-[-2px] after:bg-gray-400">
+              Business Transformation</h2>
+            <p className="text-base sm:text-lg md:text-2xl text-gray-600 leading-relaxed">
               Nexuswave drives your business forward by building innovative processes
               that align with your vision for exceptional service. We empower you to
               exceed customer expectations with cutting-edge solutions tailored for

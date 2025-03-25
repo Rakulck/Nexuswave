@@ -1,11 +1,37 @@
 import React from 'react';
 
 const Contact = () => {
+  const style = `
+    @keyframes underline {
+      0% {
+        transform: scaleX(0);
+        transform-origin: left;
+      }
+      50% {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+      50.1% {
+        transform: scaleX(1);
+        transform-origin: right;
+      }
+      100% {
+        transform: scaleX(0);
+        transform-origin: right;
+      }
+    }
+
+    .animate-underline::after {
+      animation: underline 3s ease-in-out infinite;
+    }
+  `;
+
   return (
     <section id="contact" className="py-20 bg-gray-50">
+      <style>{style}</style>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-7xl font-bold text-gray-800 mb-4">Get in touch</h2>
+          <h2 className="text-7xl font-bold text-gray-800 mb-4 relative inline-block after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-black after:bottom-[-8px] after:left-0 animate-underline">Get in touch</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Get in touch with us to discuss your project or learn more about our services.
