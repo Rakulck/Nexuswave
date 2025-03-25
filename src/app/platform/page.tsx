@@ -10,7 +10,7 @@ export default function Platform() {
       <Navbar />
       
       {/* Hero Section */}
-      <div className="relative h-[40vh] w-full">
+      <div className="relative h-[60vh] w-full">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
           autoPlay
