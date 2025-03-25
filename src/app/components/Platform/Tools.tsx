@@ -58,7 +58,7 @@ const Tools = () => {
               key={index}
               className="flex flex-col items-center"
             >
-              <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-xl overflow-hidden mb-8">
+              <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] rounded-xl overflow-hidden mb-8">
                 <Image
                   src={tool.image}
                   alt={`Tool ${index + 1}`}
