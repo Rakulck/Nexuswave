@@ -56,7 +56,7 @@ const Capabilities = () => {
     <section className="py-16">
       <style>{style}</style>
       <div className="container mx-auto px-4">
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-12"
           variants={containerVariants}
           initial="hidden"
@@ -66,8 +66,8 @@ const Capabilities = () => {
           {/* Left Column - Cards */}
           <div className="space-y-8">
             {/* Card 1 */}
-            <motion.div 
-              className="relative flex bg-white rounded-xl overflow-hidden shadow-lg h-56"
+            <motion.div
+              className="relative flex bg-white rounded-xl overflow-hidden shadow-lg h-44"
               variants={itemVariants}
             >
               <div className="absolute inset-0">
@@ -88,8 +88,8 @@ const Capabilities = () => {
             </motion.div>
 
             {/* Card 2 */}
-            <motion.div 
-              className="relative flex bg-white rounded-xl overflow-hidden shadow-lg h-56"
+            <motion.div
+              className="relative flex bg-white rounded-xl overflow-hidden shadow-lg h-44"
               variants={itemVariants}
             >
               <div className="absolute inset-0">
@@ -110,8 +110,8 @@ const Capabilities = () => {
             </motion.div>
 
             {/* Card 3 */}
-            <motion.div 
-              className="relative flex bg-white rounded-xl overflow-hidden shadow-lg h-56"
+            <motion.div
+              className="relative flex bg-white rounded-xl overflow-hidden shadow-lg h-44"
               variants={itemVariants}
             >
               <div className="absolute inset-0">
@@ -133,15 +133,15 @@ const Capabilities = () => {
           </div>
 
           {/* Right Column - Main Content */}
-          <motion.div 
+          <motion.div
             className="flex flex-col justify-center"
             variants={itemVariants}
           >
             <h2 className="text-4xl font-bold mb-8 leading-tight relative inline-block after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-gray-400 after:bottom-0 after:left-0 animate-underline">Business Transformation with Us</h2>
             <p className="text-2xl text-gray-600 leading-relaxed">
-              Nexuswave drives your business forward by building innovative processes 
-              that align with your vision for exceptional service. We empower you to 
-              exceed customer expectations with cutting-edge solutions tailored for 
+              Nexuswave drives your business forward by building innovative processes
+              that align with your vision for exceptional service. We empower you to
+              exceed customer expectations with cutting-edge solutions tailored for
               operational excellence.
             </p>
           </motion.div>
