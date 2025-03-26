@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import FeaturesCarousel from './FeaturesCarousel';
+import { riskManagementFeatures } from './featuresData';
 
 export default function Solutions() {
   return (
@@ -36,7 +37,11 @@ export default function Solutions() {
       {/* Solutions Showcase */}
       <div className="py-24 bg-black">
         <div className="px-4">
-          <FeaturesCarousel />
+          <FeaturesCarousel
+            title={riskManagementFeatures.title}
+            subtitle={riskManagementFeatures.subtitle}
+            features={riskManagementFeatures.features}
+          />
         </div>
       </div>
       <Footer />

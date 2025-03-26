@@ -36,8 +36,8 @@ export default function About() {
       </div>
 
       {/* Tabs Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
+      <div className="container mx-auto px-4 py-16 w-full">
+        <div className="max-w-6xl mx-auto">
           {/* Tab Navigation */}
           <div className="flex justify-center space-x-4 mb-8">
             <button

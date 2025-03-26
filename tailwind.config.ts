@@ -15,12 +15,12 @@ const config: Config = {
       },
       keyframes: {
         underline: {
-          '0%': { transform: 'scaleX(0)' },
-          '100%': { transform: 'scaleX(1)' },
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' },
         },
       },
       animation: {
-        'underline': 'underline 0.5s ease-out forwards',
+        'underline': 'underline 1s ease-out forwards',
       },
     },
   },

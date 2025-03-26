@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-black p-6 z-50 shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 bg-black p-6 py-4 z-50 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-5xl md:text-5xl font-medium text-silver hover:text-primary transition-all duration-300 transform hover:scale-105 tracking-wider font-poppins">
           <i className="fas fa-wave-square mr-3 text-4xl md:text-6xl"></i>

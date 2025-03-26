@@ -2,7 +2,19 @@
 
 import React, { useRef } from 'react';
 
-const FeaturesCarousel = () => {
+interface Feature {
+  image: string;
+  title: string;
+  description: string;
+}
+
+interface FeaturesCarouselProps {
+  title: string;
+  subtitle: string;
+  features: Feature[];
+}
+
+const FeaturesCarousel: React.FC<FeaturesCarouselProps> = ({ title, subtitle, features }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const scrollContainer = (direction: 'left' | 'right') => {
@@ -31,77 +43,27 @@ const FeaturesCarousel = () => {
           {/* Left Side Content */}
           <div className="w-[400px] flex-none text-center snap-center">
             <h2 className="text-4xl font-semibold text-white mb-6">
-              Integrated Risk Management Solutions
+              {title}
             </h2>
             <p className="text-xl text-gray-400 leading-relaxed">
-              Nexuswave put risk under one roof to help you make better decisions faster.
+              {subtitle}
             </p>
           </div>
 
-          {/* Feature 1 */}
-          <div className="flex-none w-[400px] snap-center">
-            <div className="relative h-[700px] rounded-3xl overflow-hidden border border-neutral-800">
-              <img 
-                src="/assets/point-1.jpg" 
-                alt="Risk View" 
-                className="w-full h-full object-cover"
-              />
+          {/* Features */}
+          {features.map((feature, index) => (
+            <div key={index} className="flex-none w-[400px] snap-center">
+              <div className="relative h-[600px] rounded-3xl overflow-hidden border border-neutral-800">
+                <img 
+                  src={feature.image} 
+                  alt={feature.title} 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-medium text-white mt-6 mb-2">{feature.title}</h3>
+              <p className="text-gray-400 text-lg">{feature.description}</p>
             </div>
-            <h3 className="text-xl font-medium text-white mt-6 mb-2">The thinnest borders on any risk platform</h3>
-            <p className="text-gray-400">Seamlessly integrate risk management across your organization</p>
-          </div>
-
-          {/* Feature 2 */}
-          <div className="flex-none w-[400px] snap-center">
-            <div className="relative h-[700px] rounded-3xl overflow-hidden border border-neutral-800">
-              <img 
-                src="/assets/point-2.jpg" 
-                alt="Cloud Platform" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="text-xl font-medium text-white mt-6 mb-2">Cloud-native architecture</h3>
-            <p className="text-gray-400">Connect systems and data for smarter decisions</p>
-          </div>
-
-          {/* Feature 3 */}
-          <div className="flex-none w-[400px] snap-center">
-            <div className="relative h-[700px] rounded-3xl overflow-hidden border border-neutral-800">
-              <img 
-                src="/assets/point-3.jpg" 
-                alt="Risk Reduction" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="text-xl font-medium text-white mt-6 mb-2">Premium Grade risk optimization</h3>
-            <p className="text-gray-400">Maximize opportunities with actionable insights</p>
-          </div>
-
-          {/* Feature 4 */}
-          <div className="flex-none w-[400px] snap-center">
-            <div className="relative h-[700px] rounded-3xl overflow-hidden border border-neutral-800">
-              <img 
-                src="/assets/point-4.jpg" 
-                alt="Real-Time Visibility" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="text-xl font-medium text-white mt-6 mb-2">Real-time visibility</h3>
-            <p className="text-gray-400">Monitor and address risks as they emerge</p>
-          </div>
-
-          {/* Feature 5 */}
-          <div className="flex-none w-[400px] snap-center">
-            <div className="relative h-[700px] rounded-3xl overflow-hidden border border-neutral-800">
-              <img 
-                src="/assets/point-6.jpg" 
-                alt="Strategic Growth" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="text-xl font-medium text-white mt-6 mb-2">Strategic growth tools</h3>
-            <p className="text-gray-400">Drive business growth with confidence</p>
-          </div>
+          ))}
         </div>
       </div>
 

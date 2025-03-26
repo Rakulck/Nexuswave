@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import ServiceCard from './ServiceCard';
+import FeaturesCarousel from '@/app/solutions/FeaturesCarousel';
 
 const Services = () => {
   const style = `
@@ -25,46 +27,45 @@ const Services = () => {
     .animate-underline::after {
       animation: underline 3s ease-in-out infinite;
     }
+
+    .features-container {
+      padding-left: 0 !important;
+    }
   `;
 
   const services = [
     {
-      imageSrc: "/assets/initiate.jpg",
-      imageAlt: "Claim Initiation",
+      image: "/assets/initiate.jpg",
       title: "Claim Initiation",
       description: "Streamlined process for initiating and submitting claims efficiently"
     },
     {
-      imageSrc: "/assets/loading.jpg",
-      imageAlt: "Claim Processing",
+      image: "/assets/loading.jpg",
       title: "Claim Processing",
       description: "Advanced processing systems for quick and accurate claim handling"
     },
     {
-      imageSrc: "/assets/team.jpg",
-      imageAlt: "Claim Review",
+      image: "/assets/team.jpg",
       title: "Claim Review",
       description: "Thorough review process ensuring accuracy and compliance"
     },
     {
-      imageSrc: "/assets/any.jpg",
-      imageAlt: "Claim Authorization",
+      image: "/assets/any.jpg",
       title: "Claim Authorization",
       description: "Secure and efficient authorization process"
     },
     {
-      imageSrc: "/assets/adminstration.jpg",
-      imageAlt: "Administration",
+      image: "/assets/adminstration.jpg",
       title: "Administration",
       description: "Comprehensive administrative tools and support"
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-neutral-800 to-black">
+    <section id="services" className="py-20 bg-gradient-to-b from-neutral-800 to-black overflow-x-hidden w-full">
       <style>{style}</style>
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+      <div className="w-full max-w-none">
+        <div className="text-center mb-12 px-4">
           <h2 className="text-4xl lg:text-7xl sm:text-xl md:text-4xl font-bold text-silver mb-12 relative inline-block after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-gray-400 after:bottom-[-8px] after:left-0 animate-underline">
             Claim Management</h2>
           <p className="text-3xl font-medium text-silver max-w-4xl mx-auto">
@@ -72,34 +73,12 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-12 max-w-7xl mx-auto">
-          {/* First Row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {services.slice(0, 3).map((service, index) => (
-              <ServiceCard
-                key={index}
-                imageSrc={service.imageSrc}
-                imageAlt={service.imageAlt}
-                title={service.title}
-                description={service.description}
-                index={index}
-              />
-            ))}
-          </div>
-
-          {/* Second Row - Centered */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 justify-items-center max-w-[850px] mx-auto">
-            {services.slice(3).map((service, index) => (
-              <ServiceCard
-                key={index}
-                imageSrc={service.imageSrc}
-                imageAlt={service.imageAlt}
-                title={service.title}
-                description={service.description}
-                index={index + 3}
-              />
-            ))}
-          </div>
+        <div className="features-container w-full overflow-x-auto">
+          <FeaturesCarousel
+            title="Our Services"
+            subtitle="Discover our comprehensive suite of claim management services designed to optimize your business operations."
+            features={services}
+          />
         </div>
       </div>
     </section>
