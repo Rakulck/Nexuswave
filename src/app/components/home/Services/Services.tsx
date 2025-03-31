@@ -30,9 +30,9 @@ const Services = () => {
 
     .features-container {
       padding-left: 0 !important;
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
-      margin-right: calc(-50vw + 50%);
+      width: 100%;
+      margin: 0;
+      overflow-x: hidden;
     }
   `;
 
@@ -65,7 +65,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-neutral-800 to-black overflow-x-hidden w-full">
+    <section id="services" className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-neutral-800 to-black w-full">
       <style>{style}</style>
       <div className="w-full max-w-none">
         <div className="text-center mb-8 sm:mb-12 px-4 sm:px-6 lg:px-8">
@@ -76,7 +76,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="features-container w-full overflow-x-auto flex justify-center">
+        <div className="features-container flex justify-center">
           <FeaturesCarousel
             title="Our Services"
             subtitle="Discover our comprehensive suite of claim management services designed to optimize your business operations."

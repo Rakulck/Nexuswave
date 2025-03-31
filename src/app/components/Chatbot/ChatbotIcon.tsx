@@ -13,6 +13,7 @@ const ChatbotIcon = () => {
                    text-white rounded-full p-3 shadow-lg transform transition-all duration-300 
                    hover:scale-110 hover:shadow-xl flex items-center justify-center relative group"
         onClick={() => setIsChatOpen(!isChatOpen)}
+        suppressHydrationWarning
       >
         <div className="absolute bottom-full right-0 mb-2 px-3 py-1 bg-gray-800 text-white text-sm rounded-lg 
                        opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">

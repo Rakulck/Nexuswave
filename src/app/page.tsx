@@ -8,9 +8,9 @@ import ChatbotIcon from './components/Chatbot/ChatbotIcon';
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative overflow-x-hidden w-full">
       <Navbar />
-      <div className="min-h-screen">
+      <div className="min-h-screen w-full overflow-x-hidden">
         <Hero />
         <About />
         <Services />
