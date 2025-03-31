@@ -33,22 +33,21 @@ const About = () => {
   return (
       <div id="about" className="bg-gradient-to-b from-black to-neutral-800">
         <style>{style}</style>
-        <div className="container mx-auto flex flex-col md:flex-row items-center max-w-[1600px] px-8 md:px-16 py-12">
+        <div className="container mx-auto flex flex-col md:flex-row items-center max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-16 py-6 sm:py-8 md:py-12">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="md:w-1/2 pr-8 md:pr-16 py-12"
+            className="md:w-1/2 md:pr-4 lg:pr-8 xl:pr-16 py-4 sm:py-6 md:py-8 lg:py-12"
           >
-            <h2 className=" text-4xl lg:text-7xl sm:text-2xl md:text-4xl font-['Inter'] font-bold text-silver mb-8 relative inline-block after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-gray-400 after:bottom-[-8px] after:left-0 animate-underline">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-['Inter'] font-bold text-silver mb-4 sm:mb-6 md:mb-8 relative inline-block after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-gray-400 after:bottom-[-8px] after:left-0 animate-underline">
               Who We Are</h2>
-            <p className="text-2xl text-silver mt-6 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-silver mt-3 sm:mt-4 md:mt-6 leading-relaxed">
              Nexus Wave streamlines enterprise business processes by modernizing and digitizing workflows, 
              empowering employees in the office and at the edge.
             </p>
             
-            
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+            <div className="mt-6 sm:mt-8 md:mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 lg:gap-x-12 lg:gap-y-8">
               <FeatureCard icon={TrophyIcon} title="Award Winning" />
               <FeatureCard icon={UserGroupIcon} title="Expert Team" delay={0.2} />
               <FeatureCard icon={PhoneIcon} title="24/7 Support" delay={0.4} />
@@ -66,9 +65,13 @@ const About = () => {
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="md:w-1/2 flex justify-end"
+            className="md:w-1/2 flex justify-end mt-6 sm:mt-8 md:mt-0"
           >
-            <img src="/assets/about.jpg" alt="About NexusWave" className="rounded-lg w-full md:w-[700px] h-[400px] md:h-[500px]" />
+            <img 
+              src="/assets/about.jpg" 
+              alt="About NexusWave" 
+              className="rounded-lg w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[500px] object-cover"
+            />
           </motion.div>
         </div>
       </div>

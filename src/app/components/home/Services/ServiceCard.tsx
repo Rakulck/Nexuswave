@@ -27,10 +27,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ imageSrc, imageAlt, title, de
         delay: index * 0.2,
         ease: [0.21, 0.47, 0.32, 0.98]
       }}
-      className="transition-all duration-300 bg-black p-8 rounded-3xl shadow-lg min-h-[600px] max-w-[400px] mx-auto w-full flex flex-col items-center justify-center text-center relative overflow-hidden"
+      className="transition-all duration-300 bg-black p-8 rounded-3xl shadow-lg h-[600px] max-w-[400px] mx-auto w-full flex flex-col items-center justify-center text-center relative overflow-hidden"
     >
       <motion.div 
-        className="absolute inset-0"
+        className="absolute inset-0 h-[300px]"
         initial={{ scale: 1.2 }}
         animate={isInView ? { scale: 1 } : { scale: 1.2 }}
         transition={{
@@ -48,7 +48,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ imageSrc, imageAlt, title, de
         />
       </motion.div>
       <motion.div 
-        className="relative z-10"
+        className="relative z-10 flex flex-col justify-center h-[300px]"
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{
@@ -58,7 +58,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ imageSrc, imageAlt, title, de
         }}
       >
         <h3 className="text-5xl font-extrabold text-silver mb-8">{title}</h3>
-        <p className="text-3xl font-medium text-silver">{description}</p>
+        <p className="text-3xl font-medium text-silver line-clamp-3">{description}</p>
       </motion.div>
     </motion.div>
   );

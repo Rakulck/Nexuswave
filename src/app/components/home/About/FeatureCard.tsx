@@ -22,19 +22,19 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
-      className={`flex items-center ${isContact ? 'justify-between' : 'gap-4'} p-6 bg-neutral-900/50 rounded-xl 
+      className={`flex items-center ${isContact ? 'justify-between' : 'gap-3 sm:gap-4'} p-4 sm:p-6 bg-neutral-900/50 rounded-xl 
         border border-gray-700/50 shadow-lg hover:border-gray-500/80 hover:shadow-xl 
         transition-all duration-300 ${isContact ? 'border-2 border-gray-500/50 col-span-1 md:col-span-2 relative overflow-hidden group' : ''}`}
     >
       {isContact && (
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-400/20 to-transparent animate-shimmer"></div>
       )}
-      <div className={`flex items-center ${isContact ? 'gap-4 z-10' : 'gap-4'}`}>
-        <Icon className="h-10 w-10 text-silver" />
-        <span className="text-2xl font-bold text-silver">{title}</span>
+      <div className={`flex items-center ${isContact ? 'gap-3 sm:gap-4 z-10' : 'gap-3 sm:gap-4'}`}>
+        <Icon className="h-8 w-8 sm:h-10 sm:w-10 text-silver" />
+        <span className="text-lg sm:text-xl md:text-2xl font-bold text-silver">{title}</span>
       </div>
       {isContact && phoneNumber && (
-        <a href={`tel:${phoneNumber}`} className="text-3xl font-bold text-silver hover:text-white transition-colors z-10">
+        <a href={`tel:${phoneNumber}`} className="text-xl sm:text-2xl md:text-3xl font-bold text-silver hover:text-white transition-colors z-10">
           {phoneNumber}
         </a>
       )}
