@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-black p-6 py-4 z-50 shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 bg-black p-3 sm:p-4 md:p-6 py-2 sm:py-3 md:py-4 z-50 shadow-lg">
       <div className="container mx-auto flex justify-between items-center relative">
         {/* Mobile Menu Button */}
         <button 
@@ -28,12 +28,12 @@ const Navbar = () => {
           className="md:hidden text-silver hover:text-primary transition-all duration-300 transform hover:scale-110 text-center absolute left-0"
           aria-label="Toggle Menu"
         >
-          <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'} text-4xl`}></i>
+          <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'} text-2xl sm:text-3xl`}></i>
         </button>
         
-        <Link href="/" className="text-5xl md:text-6xl font-medium text-silver hover:text-primary transition-all duration-300 transform hover:scale-105 tracking-wider font-poppins mx-auto">
-          <i className="fas fa-wave-square mr-2 md:mr-3 text-4xl md:text-7xl"></i>
-          <span className="text-3xl md:text-6xl">NexusWave</span>
+        <Link href="/" className="text-3xl sm:text-4xl md:text-6xl font-medium text-silver hover:text-primary transition-all duration-300 transform hover:scale-105 tracking-wider font-poppins mx-auto">
+          <i className="fas fa-wave-square mr-2 md:mr-3 text-2xl sm:text-3xl md:text-7xl"></i>
+          <span className="text-2xl sm:text-3xl md:text-6xl">NexusWave</span>
         </Link>
         
         {/* Desktop Menu */}

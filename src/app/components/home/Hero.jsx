@@ -37,7 +37,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5 }} 
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[10rem] font-bold tracking-normal bg-clip-text text-transparent bg-gradient-to-r from-[#5A5959] to-[#B9B7B7] text-center leading-tight" 
+            className="text-4xl sm:text-10xl md:text-7xl lg:text-8xl xl:text-[10rem] font-bold tracking-normal bg-clip-text text-transparent bg-gradient-to-r from-[#5A5959] to-[#B9B7B7] text-center leading-tight" 
             style={{ fontFamily: 'Montserrat, sans-serif' }}
           >
             <div>Nexus</div>
