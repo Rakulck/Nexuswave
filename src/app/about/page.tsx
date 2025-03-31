@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import MissionTab from '../components/MissionTab';
 import CustomersTab from '../components/CustomersTab';
+import ChatbotIcon from '../components/Chatbot/ChatbotIcon';
 
 export default function About() {
   const [activeTab, setActiveTab] = useState('mission');
@@ -168,6 +169,7 @@ export default function About() {
       </div>
 
       <Footer />
+      <ChatbotIcon />
     </div>
   );
 } 

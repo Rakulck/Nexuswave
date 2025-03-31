@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import FeaturesCarousel from './FeaturesCarousel';
 import { riskManagementFeatures } from './featuresData';
+import ChatbotIcon from '../components/Chatbot/ChatbotIcon';
 
 export default function Solutions() {
   return (
@@ -45,6 +46,7 @@ export default function Solutions() {
         </div>
       </div>
       <Footer />
+      <ChatbotIcon />
     </div>
   );
 }

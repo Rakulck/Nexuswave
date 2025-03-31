@@ -4,6 +4,7 @@ import Contact from './components/home/Contact';
 import Hero from './components/home/Hero';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ChatbotIcon from './components/Chatbot/ChatbotIcon';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Contact />
       </div>
       <Footer />
+      <ChatbotIcon />
     </main>
   );
 }

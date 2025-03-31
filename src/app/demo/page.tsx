@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Maps from '../components/Maps';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import ChatbotIcon from '../components/Chatbot/ChatbotIcon';
 
 export default function Demo() {
   return (
@@ -116,6 +117,7 @@ export default function Demo() {
         </div>
       </div>
       <Footer />
+      <ChatbotIcon />
     </div>
   );
 } 

@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Capabilities from '../components/Platform/Capabilities';
 import Tools from '../components/Platform/Tools';
+import ChatbotIcon from '../components/Chatbot/ChatbotIcon';
+
 
 export default function Platform() {
   return (
@@ -40,6 +42,7 @@ Discover a new way to digitize, deploy and automate processes to shape the futur
       <Tools />
       
       <Footer />
+      <ChatbotIcon />
     </div>
   );
 } 

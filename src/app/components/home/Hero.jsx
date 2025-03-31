@@ -11,6 +11,12 @@ const Hero = () => {
     setIsMounted(true);
   }, []);
 
+  const scrollToAbout = () => {
+    const whoAreWeSection = document.getElementById('who-are-we');
+    if (whoAreWeSection) {
+      whoAreWeSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   
   if (!isMounted) {
     return null; // Return null on server-side and first client render
@@ -56,6 +62,7 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1, duration: 0.5 }}
+            onClick={scrollToAbout}
             className="mt-4 sm:mt-6 md:mt-8 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-base sm:text-lg md:text-xl font-bold rounded-full hover:from-blue-600 hover:to-cyan-600 transition-all"
           >
             Get Started
