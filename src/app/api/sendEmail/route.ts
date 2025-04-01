@@ -36,7 +36,7 @@ export async function POST(req: Request) {
       maxMessages: 100,
       rateDelta: 1000,
       rateLimit: 5,
-      debug: process.env.NODE_ENV === 'development' // Enable debug logs in development
+      debug: process.env.NODE_ENV === 'development'
     });
 
     // Verify transporter configuration with detailed error logging
@@ -50,7 +50,8 @@ export async function POST(req: Request) {
         command: (verifyError as any).command,
         environment: process.env.NODE_ENV,
         hasEmailUser: !!process.env.EMAIL_USER,
-        hasEmailPass: !!process.env.EMAIL_PASS
+        hasEmailPass: !!process.env.EMAIL_PASS,
+        deploymentUrl: process.env.VERCEL_URL
       });
       return NextResponse.json(
         { 
@@ -61,10 +62,13 @@ export async function POST(req: Request) {
       );
     }
 
-    // Email content
+    // Email content with domain verification
     const mailOptions = {
-      from: `"NexusWave" <${process.env.EMAIL_USER}>`,
-      to: 'rakulck31@gmail.com',
+      from: {
+        name: "NexusWave",
+        address: process.env.EMAIL_USER
+      },
+      to: 'rakulck31@gmail.com', // Send to your Gmail address
       subject: `New Demo Request from ${firstName} ${lastName}`,
       html: `
         <h2>New Demo Request</h2>
@@ -79,7 +83,12 @@ export async function POST(req: Request) {
         Email: ${email}
         Message: ${message}
       `,
-      replyTo: email // Allow replying directly to the sender
+      replyTo: email,
+      headers: {
+        'X-Entity-Ref-ID': new Date().getTime().toString(),
+        'List-Unsubscribe': `<mailto:rakulck31@gmail.com>`,
+        'X-Origin': 'https://nexuswave.vercel.app'
+      }
     };
 
     // Send email with retry logic
