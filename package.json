@@ -13,6 +13,7 @@
     "framer-motion": "^12.5.0",
     "inter-font": "^3.19.0",
     "next": "15.2.3",
+    "nodemailer": "^6.10.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
@@ -21,7 +22,8 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/react": "^19",
+    "@types/nodemailer": "^6.4.17",
+    "@types/react": "19.0.12",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",

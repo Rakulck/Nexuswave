@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Maps from '../components/Maps';
@@ -8,6 +8,58 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import ChatbotIcon from '../components/Chatbot/ChatbotIcon';
 
 export default function Demo() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: ''
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Message sent successfully! We will get back to you soon.',
+        });
+        setFormData({ firstName: '', lastName: '', email: '', message: '' });
+      } else {
+        throw new Error(data.error || 'Failed to send message');
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Failed to send message. Please try again later.',
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
   return (
     <div className="min-h-screen pt-24 bg-white">
       <Navbar />
@@ -69,10 +121,20 @@ export default function Demo() {
 
       <div className="container mx-auto px-4 pb-16 mb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <form className="space-y-6 bg-white rounded-xl shadow-xl p-8 border-2 border-gray-200">
+          <form onSubmit={handleSubmit} className="space-y-6 bg-white rounded-xl shadow-xl p-8 border-2 border-gray-200">
+            {submitStatus.type && (
+              <div className={`p-4 rounded-lg ${
+                submitStatus.type === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
+              }`}>
+                {submitStatus.message}
+              </div>
+            )}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <input
                 type="text"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
                 placeholder="First Name"
                 className="w-full px-4 py-4 text-xl border-2 border-gray-300 rounded-lg focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-black placeholder-gray-500 font-semibold bg-white"
                 required
@@ -80,6 +142,9 @@ export default function Demo() {
               />
               <input
                 type="text"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
                 placeholder="Last Name"
                 className="w-full px-4 py-4 text-xl border-2 border-gray-300 rounded-lg focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-black placeholder-gray-500 font-semibold bg-white"
                 required
@@ -88,12 +153,18 @@ export default function Demo() {
             </div>
             <input
               type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Email Address"
               className="w-full px-4 py-4 text-xl border-2 border-gray-300 rounded-lg focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-black placeholder-gray-500 font-semibold bg-white"
               required
               suppressHydrationWarning
             />
             <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Your Message"
               rows={6}
               className="w-full px-4 py-4 text-xl border-2 border-gray-300 rounded-lg focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-black placeholder-gray-500 font-semibold bg-white resize-none"
@@ -102,10 +173,13 @@ export default function Demo() {
             ></textarea>
             <button
               type="submit"
-              className="w-full bg-black text-white py-4 rounded-lg font-bold text-xl transition-all duration-300 transform hover:scale-[1.02] shadow-xl hover:shadow-2xl active:scale-[0.98] border-2 border-black"
+              disabled={isLoading}
+              className={`w-full bg-black text-white py-4 rounded-lg font-bold text-xl transition-all duration-300 transform hover:scale-[1.02] shadow-xl hover:shadow-2xl active:scale-[0.98] border-2 border-black ${
+                isLoading ? 'opacity-75 cursor-not-allowed' : ''
+              }`}
               suppressHydrationWarning
             >
-              Send Message
+              {isLoading ? 'Sending...' : 'Send Message'}
             </button>
           </form>
 
