@@ -9,7 +9,7 @@ interface ChatBoxProps {
 
 const ChatBox: React.FC<ChatBoxProps> = ({ isOpen, onClose }) => {
   const [messages, setMessages] = useState<Array<{ text: string; isUser: boolean }>>([
-    { text: "Hello! I'm your AI assistant. How can I help you today?", isUser: false }
+    { text: "Hello! I'm Nexus AI. How can I help you today?", isUser: false }
   ]);
   const [inputMessage, setInputMessage] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -44,7 +44,7 @@ const ChatBox: React.FC<ChatBoxProps> = ({ isOpen, onClose }) => {
     <div className="fixed bottom-24 right-6 w-[90vw] sm:w-96 h-[400px] sm:h-[600px] bg-white rounded-lg shadow-2xl flex flex-col overflow-hidden border border-gray-200">
       {/* Header */}
       <div className="bg-gradient-to-r from-black to-white p-4 flex justify-between items-center">
-        <h3 className="text-white font-semibold">AI Assistant</h3>
+        <h3 className="text-white font-semibold">Nexus AI</h3>
         <button
           onClick={onClose}
           className="text-white hover:text-gray-200 transition-colors"
