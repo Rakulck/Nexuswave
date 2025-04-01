@@ -34,7 +34,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center justify-center">
                 <i className="fas fa-map-marker-alt mr-2"></i>
-                123 Tech Street, CA 94025
+               13800 Coppermine Rd, Herndon, VA 20171
               </li>
               <li className="flex items-center justify-center">
                 <i className="fas fa-phone mr-2"></i>
