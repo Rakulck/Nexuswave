@@ -28,27 +28,35 @@ export async function POST(req: Request) {
         pass: process.env.EMAIL_PASS,
       },
       tls: {
-        rejectUnauthorized: false
+        rejectUnauthorized: false,
+        minVersion: "TLSv1.2"
       },
-      pool: true, // Use pooled connections
+      pool: true,
       maxConnections: 5,
       maxMessages: 100,
-      rateDelta: 1000, // 1 second
-      rateLimit: 5 // 5 messages per second
+      rateDelta: 1000,
+      rateLimit: 5,
+      debug: process.env.NODE_ENV === 'development' // Enable debug logs in development
     });
 
-    // Verify transporter configuration
+    // Verify transporter configuration with detailed error logging
     try {
       await transporter.verify();
+      console.log('SMTP connection verified successfully');
     } catch (verifyError) {
       console.error('SMTP verification failed:', {
-        error: verifyError,
+        error: verifyError instanceof Error ? verifyError.message : 'Unknown error',
+        code: (verifyError as any).code,
+        command: (verifyError as any).command,
         environment: process.env.NODE_ENV,
-        host: process.env.EMAIL_HOST,
-        port: process.env.EMAIL_PORT
+        hasEmailUser: !!process.env.EMAIL_USER,
+        hasEmailPass: !!process.env.EMAIL_PASS
       });
       return NextResponse.json(
-        { error: 'Failed to verify email configuration' },
+        { 
+          error: 'Failed to verify email configuration',
+          details: process.env.NODE_ENV === 'development' ? verifyError : undefined
+        },
         { status: 500 }
       );
     }
