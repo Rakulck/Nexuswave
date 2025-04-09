@@ -44,7 +44,7 @@ const ChatBox: React.FC<ChatBoxProps> = ({ isOpen, onClose }) => {
     <div className="fixed bottom-24 right-6 w-[90vw] sm:w-96 h-[400px] sm:h-[600px] bg-white rounded-lg shadow-2xl flex flex-col overflow-hidden border border-gray-200">
       {/* Header */}
       <div className="bg-gradient-to-r from-black to-white p-4 flex justify-between items-center">
-        <h3 className="text-white font-semibold">Nexus AI</h3>
+        <h3 className="text-white font-semibold">TechSpire AI</h3>
         <button
           onClick={onClose}
           className="text-black"
