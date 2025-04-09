@@ -1,6 +1,6 @@
 export const riskManagementFeatures = {
   title: "Integrated Risk Management Solutions",
-  subtitle: "Nexuswave put risk under one roof to help you make better decisions faster.",
+  subtitle: "TechSpire put risk under one roof to help you make better decisions faster.",
   features: [
     {
       image: "/assets/point-1.jpg",

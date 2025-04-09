@@ -94,7 +94,7 @@ const Capabilities = () => {
               <div className="relative ml-auto w-2/3 p-4 sm:p-6 md:p-8 flex flex-col justify-center">
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-bold sm:mb-3 text-gray-900 leading-tight pt-4">Data in Motion</h3>
                 <p className="text-sm sm:text-base md:text-xl pb-4 text-gray-700 leading-relaxed">
-                  Nexuswave transforms data into actionable insights with automation. Streamline forms and sources using rules and collaboration tools.
+                  TechSpire transforms data into actionable insights with automation. Streamline forms and sources using rules and collaboration tools.
                 </p>
               </div>
             </motion.div>
@@ -138,7 +138,7 @@ const Capabilities = () => {
               <div className="relative ml-auto w-2/3 p-4 sm:p-6 md:p-8 flex flex-col justify-center">
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-bold sm:mb-3 text-gray-900 leading-tight pt-2">Empower & Engage</h3>
                 <p className="text-sm sm:text-base md:text-xl text-gray-700 leading-relaxed">
-                  Nexuswave empowers teams with efficient task management and automation. Approve, track, and automate workflows seamlessly.
+                  TechSpire empowers teams with efficient task management and automation. Approve, track, and automate workflows seamlessly.
                 </p>
               </div>
             </motion.div>
@@ -152,7 +152,7 @@ const Capabilities = () => {
             <h2 className="text-center md:text-left text-2xl sm:text-3xl md:text-4xl font-bold sm:mb-6 md:mb-8 leading-tight relative inline-block animate-underline after:content-[''] after:absolute after:bottom-[-2px] after:bg-gray-400">
               Business Transformation</h2>
             <p className="text-base sm:text-lg md:text-2xl text-gray-600 leading-relaxed">
-              Nexuswave drives your business forward by building innovative processes
+              TechSpire drives your business forward by building innovative processes
               that align with your vision for exceptional service. We empower you to
               exceed customer expectations with cutting-edge solutions tailored for
               operational excellence.

@@ -18,12 +18,13 @@ export default function MissionTab({ isActive }: MissionTabProps) {
           <img 
             src="/assets/mission.jpg" 
             alt="Our Mission" 
+            loading="lazy"
             className="w-full h-[400px] object-cover rounded-lg shadow-lg"
           />
         </div>
         <div className="w-full md:w-2/5">
           <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-            Nexus Wave founded in 2023 with a vision to streamline the business processes of enterprises. Our mission is to help companies modernize and digitize workflows that empower employees both in the office and at the edge of the enterprise.
+            TechSpire founded in 2023 with a vision to streamline the business processes of enterprises. Our mission is to help companies modernize and digitize workflows that empower employees both in the office and at the edge of the enterprise.
           </p>
         </div>
       </div>

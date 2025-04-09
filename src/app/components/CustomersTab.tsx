@@ -18,6 +18,7 @@ export default function CustomersTab({ isActive }: CustomersTabProps) {
           <img 
             src="/assets/customer.jpg" 
             alt="Our Customers" 
+            loading="lazy"
             className="w-full h-[400px] object-cover rounded-lg shadow-lg"
           />
         </div>

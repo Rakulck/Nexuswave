@@ -173,7 +173,7 @@ const Contact = () => {
                 </p>
                 <p className="flex items-start">
                   <i className="fas fa-envelope text-black text-xl sm:text-2xl mt-1 mr-3 sm:mr-4"></i>
-                  <span className="text-base sm:text-lg text-gray-800">info@nexuswave.com</span>
+                    <span className="text-base sm:text-lg text-gray-800">info@techspire.com</span>
                 </p>
               </div>
             </div>

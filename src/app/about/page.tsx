@@ -30,7 +30,7 @@ export default function About() {
         
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-silver px-4">
           <h1 className="text-4xl md:text-6xl font-bold text-center mb-4">
-            About NexusWave
+            About Techspire
           </h1>
           <p className="text-lg md:text-2xl text-center max-w-3xl text-gray-300">
             Empowering businesses through innovative solutions and digital transformation.
@@ -100,7 +100,7 @@ export default function About() {
                   <div>
                     <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6">Our Mission</h2>
                     <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-4 md:mb-6">
-                      Nexus Wave founded in 2023 with a vision to streamline the business processes of enterprises. Our mission is to help companies modernize and digitize workflows that empower employees both in the office and at the edge of the enterprise.
+                      Techspire founded in 2023 with a vision to streamline the business processes of enterprises. Our mission is to help companies modernize and digitize workflows that empower employees both in the office and at the edge of the enterprise.
                     </p>
                   </div>
 
@@ -108,21 +108,21 @@ export default function About() {
                     <div>
                       <h3 className="text-xl md:text-2xl font-semibold text-white mb-2 md:mb-3">Customer Success is our Success</h3>
                       <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                        Effortlessly convert paper forms, compile electronic forms, and consolidate disparate data sources with Nexuswave. Transform information into searchable, actionable data using configurable rules, timers, tasks, and collaborative features.
+                        Effortlessly convert paper forms, compile electronic forms, and consolidate disparate data sources with Techspire. Transform information into searchable, actionable data using configurable rules, timers, tasks, and collaborative features.
                       </p>
                     </div>
 
                     <div>
                       <h3 className="text-xl md:text-2xl font-semibold text-white mb-2 md:mb-3">Keep it Simple</h3>
                       <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                        Create digital user portals that streamline communications, prioritize tasks, integrate enterprise systems, and track task milestones. Nexuswave consolidates multiple tools into one, breaking down barriers to productivity and enhancing collaboration.
+                        Create digital user portals that streamline communications, prioritize tasks, integrate enterprise systems, and track task milestones. Techspire consolidates multiple tools into one, breaking down barriers to productivity and enhancing collaboration.
                       </p>
                     </div>
 
                     <div>
                       <h3 className="text-xl md:text-2xl font-semibold text-white mb-2 md:mb-3">Make it Win-Win</h3>
                       <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                        Empower your team to easily approve, reject, or assign tasks and quickly access task status, details, and attachments. Leverage the power of automation with Nexuswave to trigger actions based on rules and workflows.
+                        Empower your team to easily approve, reject, or assign tasks and quickly access task status, details, and attachments. Leverage the power of automation with Techspire to trigger actions based on rules and workflows.
                       </p>
                     </div>
                   </div>

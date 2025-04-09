@@ -29,7 +29,7 @@ export default function Platform() {
         {/* Hero Content */}
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-silver px-4">
           <h1 className="text-6xl font-bold text-center mb-4">
-           The Nexus Platform
+            TechSpire Platform
           </h1>
           <p className="text-2xl text-center max-w-3xl">
 Discover a new way to digitize, deploy and automate processes to shape the future of your business.

@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="text-center">
-            <h3 className="text-xl font-semibold mb-4">About NexusWave</h3>
+            <h3 className="text-xl font-semibold mb-4">About Techspire</h3>
             <p>
               Leading the digital transformation with innovative solutions and cutting-edge technology.
             </p>
@@ -42,13 +42,13 @@ const Footer = () => {
               </li>
               <li className="flex items-center justify-center">
                 <i className="fas fa-envelope mr-2"></i>
-                contact@nexuswave.com
+                contact@techspire.com
               </li>
             </ul>
           </div>
         </div>
         <div className="border-t mt-8 pt-8 text-center">
-          <p>&copy; {new Date().getFullYear()} NexusWave. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Techspire. All rights reserved.</p>
         </div>
       </div>
     </footer>

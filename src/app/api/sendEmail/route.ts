@@ -65,7 +65,7 @@ export async function POST(req: Request) {
     // Email content with domain verification
     const mailOptions = {
       from: {
-        name: "NexusWave",
+        name: "Techspire",
         address: process.env.EMAIL_USER
       },
       to: 'rakulck31@gmail.com', // Send to your Gmail address

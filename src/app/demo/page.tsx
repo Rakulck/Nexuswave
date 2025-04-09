@@ -99,7 +99,7 @@ export default function Demo() {
               </div>
               <h3 className="text-xl font-medium text-gray-600">Email to get free quote</h3>
               <p className="text-2xl font-bold bg-gradient-to-r from-black to-gray-800 bg-clip-text text-transparent group-hover:scale-105 transition-transform">
-                admin@nexuswaveus.com
+                info@techspire.com
               </p>
             </div>
           </div>

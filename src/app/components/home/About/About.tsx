@@ -43,7 +43,7 @@ const About = () => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-['Inter'] font-bold text-silver mb-4 sm:mb-6 md:mb-8 relative inline-block after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-gray-400 after:bottom-[-8px] after:left-0 animate-underline">
               Who We Are</h2>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-silver mt-3 sm:mt-4 md:mt-6 leading-relaxed">
-             Nexus Wave streamlines enterprise business processes by modernizing and digitizing workflows, 
+             TechSpire streamlines enterprise business processes by modernizing and digitizing workflows, 
              empowering employees in the office and at the edge.
             </p>
             
@@ -69,7 +69,8 @@ const About = () => {
           >
             <img 
               src="/assets/about.jpg" 
-              alt="About NexusWave" 
+              alt="About Techspire" 
+              loading="lazy"
               className="rounded-lg w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[500px] object-cover"
             />
           </motion.div>

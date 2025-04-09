@@ -12,9 +12,9 @@ const Hero = () => {
   }, []);
 
   const scrollToAbout = () => {
-    const whoAreWeSection = document.getElementById('who-are-we');
-    if (whoAreWeSection) {
-      whoAreWeSection.scrollIntoView({ behavior: 'smooth' });
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
   
@@ -30,6 +30,7 @@ const Hero = () => {
         loop
         muted
         playsInline
+        loading="lazy"
         className="absolute top-0 left-0 w-full h-full object-cover opacity-50"
       >
         <source src="/assets/2.mp4" type="video/mp4" />
@@ -43,11 +44,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5 }} 
-            className="text-4xl sm:text-10xl md:text-7xl lg:text-8xl xl:text-[10rem] font-bold tracking-normal bg-clip-text text-transparent bg-gradient-to-r from-[#5A5959] to-[#B9B7B7] text-center leading-tight" 
+            className="text-4xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-[7rem] font-bold tracking-normal bg-clip-text text-transparent bg-gradient-to-r from-[#5A5959] to-[#B9B7B7] text-center leading-tight" 
             style={{ fontFamily: 'Montserrat, sans-serif' }}
           >
-            <div>Nexus</div>
-            <div>Wave</div>
+            <div> </div>
+            <div>TechSpire</div>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}

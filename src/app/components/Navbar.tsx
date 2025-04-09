@@ -33,7 +33,7 @@ const Navbar = () => {
         
         <Link href="/" className="text-3xl sm:text-4xl md:text-6xl font-medium text-silver hover:text-primary transition-all duration-300 transform hover:scale-105 tracking-wider font-poppins mx-auto">
           <i className="fas fa-wave-square mr-2 md:mr-3 text-2xl sm:text-3xl md:text-7xl"></i>
-          <span className="text-2xl sm:text-3xl md:text-6xl">NexusWave</span>
+          <span className="text-2xl sm:text-3xl md:text-6xl">TechSpire</span>
         </Link>
         
         {/* Desktop Menu */}
