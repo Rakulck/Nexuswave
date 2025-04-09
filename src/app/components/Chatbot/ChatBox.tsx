@@ -9,7 +9,7 @@ interface ChatBoxProps {
 
 const ChatBox: React.FC<ChatBoxProps> = ({ isOpen, onClose }) => {
   const [messages, setMessages] = useState<Array<{ text: string; isUser: boolean }>>([
-    { text: "Hello! I'm Nexus AI. How can I help you today?", isUser: false }
+    { text: "Hello! I'm TechSpire AI. How can I help you today?", isUser: false }
   ]);
   const [inputMessage, setInputMessage] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -83,7 +83,7 @@ const ChatBox: React.FC<ChatBoxProps> = ({ isOpen, onClose }) => {
             type="text"
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
-            placeholder="Type your message..."
+            placeholder="Type your message..."        
             className="flex-1 p-2 border border-gray-300 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-black"
           />
           <button
